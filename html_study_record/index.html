@@ -2,14 +2,41 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>html学习记录</title>
+<title>Html学习记录</title>
 <style>
-    
+    h1{
+        text-align: center;
+    }
+    p{
+        font-family:"Comic Sans MS", cursive, sans-serif
+    }
+    li{
+        text-indent:20px
+        line-height:1.5;/*行高*/
+    }
+    /* 问题格式 */
+    li.question{
+        color:rgb(236, 10, 10);
+        text-indent:20px;/*缩进*/
+        line-height:1.5;/*行高*/
+        font-size:1.5em;
+        
+    }
+    /* 答案格式 */
+    li.answer{
+        color:green;
+
+    }
 </style>
 
 </head>
 <body>
-    <div><h>工作日志</h></div>
-    <p>发现如果在服务器直接远程下载GitHub的内容，会生成一个git文件，那如何下载文件呢？</p>
+    <div><h1>工作日志</h1></div>
+    <hr>
+    <p ><li class="question">疑问：服务器如果远程下载GitHub的内容，会生成一个git文件，那如何自动部署呢？</li></p>
+    <p></p>
+    <hr>
+    <p><li class="answer">优先级顺序：近的高。</li></p>
+    <hr>
 </body>
 </html>
