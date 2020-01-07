@@ -1,10 +1,9 @@
 <?php
-// $q=isset($_GET['YZH'])? $_GET['YZH']:'';
-// if(is_array($q)){
-//     foreach ($q as $val) {
-//         echo $val.PHP_EOL;
-//     }
-// }
-// echo $_GET['YZH[]'];
-echo "Yes,You are right.".$_POST['how'];
+$q=isset($_POST['YZH'])? $_POST['YZH']:'';
+if(is_array($q)){
+    foreach ($q as $val) {
+        echo "YZH is ".$val."."."<br>";
+    }
+}
+echo "Yes,You are right. ".$_POST['how'];
 ?>
