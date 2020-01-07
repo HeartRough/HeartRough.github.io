@@ -52,10 +52,10 @@
     <hr>
     <p><li class="question">Q:warning:本地提交表单时出现的错误：<img src="/pictures/false_405.jpeg" alt="FALSE_405" width="100" height="71">（服务器里可以正确提交），如何解决？</li>
      <li class="question1">若“method”由post改为get，点击submit后会自动下载对应的php文件，哭辽!</li></p>
+     <li class="answer">php环境没有弄对，或者文件没有放在www目录下。</li>
     <hr>
     <p><li class="question">Q:咱的图片加载不出来啊！！！</li></p>
-    <p><li class="answer">A:检查路径有没有写错。</li>
-        <li class="answer">确定phpstudy配置环境成功。</li></p>
+    <p><li class="answer">A:检查路径有没有写错。（未解决）</li></p>
     <hr>
     <p><li class="question">Q:如何用相对路径显示照片呢？提交到服务器可以，那在本地呢？</li></p>
     <p><li class="answer">A:有"./"或者"不写"就是相对路径</li>
@@ -66,16 +66,18 @@
     <p><li>表单<br>例子如下：</li></p>
     <div>
         <form name="input" action="cool.php" method="POST">
-            <!-- <input type="checkbox" name="YZH[]" value="cool">He's a cool boy.<br>
-            <input type="checkbox" name="YZH[]" value="very cool">He's very cool.<br>
-            <input type="checkbox" name="YZH[]" value="Shuai De Yi Pi">他帅的一批。<br> -->
-            <p>How about YZH?<input type="text" name="how" value="He is so cool"></p>
+            <p>How about YZH?
+                <input type="checkbox" name="YZH[]" value="cool">He's a cool boy.<br>
+                <input type="checkbox" name="YZH[]" value="very cool">He's very cool.<br>
+                <input type="checkbox" name="YZH[]" value="Shuai De Yi Pi">他帅的一批。<br>
+                <input type="text" name="how" value="He is so cool">
+            </p>
             <input type="submit" value="SUBMIT     ">
         </form>
-        <hr>
     </div>
+    <hr>
     <h1>一些注意点</h1>
-    <p><li>复选框的选项支持全局设置,比如我设置的字体,它还活着.deathw</li></p>
+    <p><li>复选框的选项支持全局设置,比如我设置的字体,它还活着。</li></p>
     <p><li>CSS优先级顺序：近的高。</li></p>
     <p><li>li自带换行。</li></p>
 </body>
