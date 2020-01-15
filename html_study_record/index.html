@@ -49,10 +49,8 @@
 
 </head>
 <body>
-   <!-- <img src="http://xinke.xyz/pictures/bilibili.png?tdsourcetag=s_pctim_aiomsg" alt="xinke.xyz" width="1280" height="200"> -->
-   <img src="/pictures/bilibili.png" alt="xinke.xyz" width="1280" height="200">
+   <img src="http://xinke.xyz/pictures/bilibili.png" alt="xinke.xyz" width="1280" height="200">
         <!-- TODO -->
-    
     <div>
 
     </div>
@@ -61,15 +59,16 @@
         <p><li class="question">Q:背景图片的显示</li></p>
         <p><li class="question">Q:PHP_EOL和"\n"为何实际运行不换行？而"&lt;br&gt;"可以。</li></p>   <!--&lt;是"<"&gt;是">" -->
         <hr>
-        <p ><li class="question">Q:服务器如果远程下载GitHub的内容，会生成一个git文件，那如何自动部署呢？</li></p>
+        <p ><li class="question_finished">Q:服务器如果远程下载GitHub的内容，会生成一个git文件，那如何自动部署呢？</li></p>
+        <p><li class="answer">A:自动部署指的不是远程下载，而是在服务器安装git后，与github进行密钥配对，再用钩子进行连接就好了。</li></p>
         <hr>
         <p><li class="question">Q:异步提交是啥?当前页面提交怎么办到?</li></p>
         <hr>
-        <p><li class="question_finished">Q:warning:本地提交表单时出现的错误：<img src="/pictures/false_405.jpeg" alt="FALSE_405" width="100" height="71">（服务器里可以正确提交），如何解决？</li>
+        <p><li class="question_finished">Q:warning:本地提交表单时出现的错误：<img src="http://xinke.xyz/pictures/false_405.jpeg" alt="FALSE_405" width="100" height="71">（服务器里可以正确提交），如何解决？</li>
         <li class="answer">php环境没有弄对，或者文件(项目)没有放在www目录下。</li>
         <hr>
-        <p><li class="question">Q:咱的图片加载不出来啊！！！提交到服务器可以，那在本地呢？</li></p>
-        <!-- <p><li class="answer">A:</li></p> -->
+        <p><li class="question_finished">Q:咱的图片加载不出来啊！！！提交到服务器可以，那在本地呢？</li></p>
+        <p><li class="answer">A:使用链接进行显示。</li></p>
         <hr>
         <p><li class="question">Q:如何用相对路径显示照片呢？</li></p>
         <p><li class="answer">A:有"./"或者"不写"就是相对路径</li>
@@ -96,6 +95,7 @@
         <p><li>CSS优先级顺序：近的高。</li></p>
         <p><li>li自带换行。</li></p>
         <p><li>一个汉字占三个字符位置。</li></p>
+        <p><li> div根据自身模块大小进行变动，一个是水平变动，一个是垂直变动。<mark>transform:translate(-50%,0);</mark></li></p>
     </div>
 </body>
 </html>

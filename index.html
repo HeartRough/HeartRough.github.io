@@ -5,19 +5,23 @@
 <title>辛科的个人博客</title>
 <style>
     /* 用于限制预备号的格式，居中，最下端 */
-    .wrap{
+    div.footer{
         position:absolute;
         bottom:0;
-        margin-left:-50px;/*div宽度的一半*/
         left:50%;
+        /* 一个是水平变动，一个是垂直变动 */
+        transform:translate(-50%,0);
+        padding:5px;
+        background-color: #f1f1f1;
+        text-align:center;
     }
-    .try{
-    margin:0 auto;
-    border:1px solid #000;
+    a{
+      background-color: #ddd;
+      color: black;
     }
     body{
-    text-align:center;
-        }
+      text-align:center;
+    }
     p{
       font-family:"Comic Sans MS", cursive, sans-serif
     }
@@ -43,16 +47,13 @@
           <p><li>I will try and test the code on the website,and record the process of study.</li></p>
           <p><li>Now,let's go!</li></p>
           <p><li>Our first title is html.</li></p>
-          <p>My github is <a href="https://github.com/HeartRougn">https://github.com/HeartRougn</a>.</p>
+          <p>My github is <a href="https://github.com/HeartRougn/xinke.xyz">https://github.com/HeartRougn/xinke.xyz</a>.</p>
           <p>Although, there is nothing, hhh.</p>
         </div>
   </div>
   <div><p><li class="TongDao"><a href="./html_study_record">Html</a></li></p></div>
-  <div><p><li class="TongDao">Finished!</li></p></div>
-  <div class="wrap">
-    <div class="try">
-      <a href="http://www.beian.miit.gov.cn/">苏ICP备19072717号</a>  
-    </div>
+  <div class="footer">
+    <p style="font-size:15px;">网络备案号：<a href="http://www.beian.miit.gov.cn/">苏ICP备19072717号</a></p> 
   </div>
 </body>
 </html>
