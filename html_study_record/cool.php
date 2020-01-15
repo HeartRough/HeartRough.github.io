@@ -23,6 +23,6 @@ if(is_array($q)){
 echo "Yes,You are right. ".$_POST['how']."<br>";
 ?>
 <mark>恭喜你发现了宝藏!!!</mark><br>
-<img src="http://xinke.xyz/pictures/YZH_DL.jpg" alt="xinke.xyz" width="1080" height="1440">
+<img src="http://xinke.xyz/pictures/YZH_DL.jpg" alt="YZH_DL.jpg" width="1080" height="1440">
 </body>
 </html>
