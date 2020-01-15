@@ -17,7 +17,6 @@
         line-height:1.5;/*行高*/
     }
     li{
-        font-family:"Comic Sans MS", cursive, sans-serif;
         text-indent:20px;/*缩进*/
         line-height:1.5;/*行高*/
     }
@@ -39,22 +38,41 @@
         font-size:0.7em;
     }
     div.top{
-    background-position: 50%;
-    background-size: cover;
-    transition: background-image .2s ease,background-size 1s cubic-bezier(0.25, 0.1, 0.91, 0.37);
-    padding-top: 116px;
-    position: relative;
-}
+        background-image:url("//xinke.xyz/pictures/bilibili.png");
+        width:1280px;
+        height:200px;
+        /* 水平居中 */
+        margin:0 auto;
+    }
+    div.center{
+        min-width:1280px;
+    }
+    div.middle{
+        position:relative;
+        left:350px;
+        background-color:rgb(241, 241, 241);
+    }
+    div.gallery{
+        width:350px;
+        position:absolute;
+        left:0;
+        top:280px;
+    }
 </style>
 
 </head>
 <body>
-   <img src="http://xinke.xyz/pictures/bilibili.png" alt="bilibili.png" width="1280" height="200">
-        <!-- TODO -->
-    <div>
-
+    <div class="top">
+        <!-- TO--DO -->
     </div>
-    <div>
+    <div class="center">
+    <div class="gallery">
+        <h1 style="top:0;">涂鸦室</h1>
+        <img src="//xinke.xyz/doodling/Dragon.jpg" alt="Dragon.jpg" width="350px" height="497px">
+        <br>
+        <img src="//xinke.xyz/doodling/Dragon_more.jpg" alt="Dragon_more.jpg" width="350px" height="483px">
+    </div>
+    <div class="middle">
         <h1>工作日志</h1>
         <p><li class="question">Q:背景图片的显示</li></p>
         <p><li class="question">Q:PHP_EOL和"\n"为何实际运行不换行？而"&lt;br&gt;"可以。</li></p>   <!--&lt;是"<"&gt;是">" -->
@@ -64,7 +82,7 @@
         <hr>
         <p><li class="question">Q:异步提交是啥?当前页面提交怎么办到?</li></p>
         <hr>
-        <p><li class="question_finished">Q:warning:本地提交表单时出现的错误：<img src="http://xinke.xyz/pictures/false_405.jpeg" alt="FALSE_405" width="100" height="71">（服务器里可以正确提交），如何解决？</li>
+        <p><li class="question_finished">Q:warning:本地提交表单时出现的错误：<img src="//xinke.xyz/pictures/false_405.jpeg" alt="FALSE_405" width="100" height="71">（服务器里可以正确提交），如何解决？</li>
         <li class="answer">php环境没有弄对，或者文件(项目)没有放在www目录下。</li>
         <hr>
         <p><li class="question_finished">Q:咱的图片加载不出来啊！！！提交到服务器可以，那在本地呢？</li></p>
@@ -97,5 +115,6 @@
         <p><li>一个汉字占三个字符位置。</li></p>
         <p><li> div根据自身模块大小进行变动，一个是水平变动，一个是垂直变动。<mark>transform:translate(-50%,0);</mark></li></p>
     </div>
+</div>
 </body>
 </html>
