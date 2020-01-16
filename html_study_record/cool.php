@@ -2,10 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>大佬的玉照</title>
+    <title>YZH_DL</title>
     <style>
     body{
         font-family:"Comic Sans MS", cursive, sans-serif;
+        font-size:20px;
     }
     mark{
         background-color:#ddd;
@@ -22,7 +23,7 @@ if(is_array($q)){
 }
 echo "Yes,You are right. ".$_POST['how']."<br>";
 ?>
-<mark>恭喜你发现了宝藏!!!</mark><br>
-<img src="http://xinke.xyz/pictures/YZH_DL.jpg" alt="YZH_DL.jpg" width="1080" height="1440">
+<!-- <mark>恭喜你发现了宝藏!!!</mark><br>
+<img src="http://xinke.xyz/pictures/YZH_DL.jpg" alt="YZH_DL.jpg" width="1080" height="1440"> -->
 </body>
 </html>
