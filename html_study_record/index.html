@@ -45,18 +45,24 @@
         margin:0 auto;
     }
     div.center{
-        min-width:1280px;
+        min-width:(1280-150)px;
     }
     div.middle{
-        position:relative;
-        left:350px;
+        margin-left:150px;
+        height:100%;
         background-color:rgb(241, 241, 241);
     }
+    /* 涂鸦室 */
     div.gallery{
-        width:350px;
-        position:absolute;
+        top:230px;
         left:0;
-        top:280px;
+        width:150px;
+        height:100%;
+        position:absolute;
+        background-color:#CCCCCC;
+    }
+    mark{
+        background-color:#ddd;
     }
 </style>
 
@@ -67,17 +73,25 @@
     </div>
     <div class="center">
     <div class="gallery">
+        <div style="padding-top:10px;">
+            <img src="//xinke.xyz/gifs/Happy.gif" alt="Happy.gif" width="150px" height="150px" >
+        </div>
+        <br><hr>
         <h1 style="top:0;">涂鸦室</h1>
-        <img src="//xinke.xyz/doodling/Dragon.jpg" alt="Dragon.jpg" width="350px" height="497px">
+        <hr>
+        <img src="//xinke.xyz/doodling/Dragon.jpg" alt="Dragon.jpg" width="150px" height="213px">
+        <br><hr>
+        <img src="//xinke.xyz/doodling/Dragon_more.jpg" alt="Dragon_more.jpg" width="150px" height="207px">
         <br>
-        <img src="//xinke.xyz/doodling/Dragon_more.jpg" alt="Dragon_more.jpg" width="350px" height="483px">
-        <br>
-        <img src="//xinke.xyz/gifs/Happy.gif" alt="Happy.gif" width="230px" height="200px">
+        
     </div>
     <div class="middle">
         <h1>工作日志</h1>
-        <p><li class="question">Q:背景图片的显示</li></p>
-        <p><li class="question">Q:PHP_EOL和"\n"为何实际运行不换行？而"&lt;br&gt;"可以。</li></p>   <!--&lt;是"<"&gt;是">" -->
+        <p><li class="question_finished">Q:背景图片的显示</li></p>
+        <p><li class="answer">A:使用绝对路径,以及background属性。</li></p>
+        <hr>
+        <p><li class="question_finished">Q:PHP_EOL和"\n"为何实际运行不换行？而"&lt;br&gt;"可以。</li></p>   <!--&lt;是"<"&gt;是">" -->
+        <p><li class="answer">A:有换行的属性，但是页面是html所以没有换行。</li></p>
         <hr>
         <p ><li class="question_finished">Q:服务器如果远程下载GitHub的内容，会生成一个git文件，那如何自动部署呢？</li></p>
         <p><li class="answer">A:自动部署指的不是远程下载，而是在服务器安装git后，与github进行密钥配对，再用钩子进行连接就好了。</li></p>
@@ -97,6 +111,7 @@
             <li class="answer">后端的绝对路径相对于盘符根目录。</li></p>
         <p><a href="https://www.cnblogs.com/zmz-com/p/10256388.html"><li class="quote">感谢张大佬</li></a></p>
         <hr>
+        <h1>实例</h1>
         <p><li>表单<br>例子如下：</li></p>
         <div>
             <form name="input" action="cool.php" method="POST">
@@ -115,7 +130,8 @@
         <p><li>CSS优先级顺序：近的高。</li></p>
         <p><li>li自带换行。</li></p>
         <p><li>一个汉字占三个字符位置。</li></p>
-        <p><li> div根据自身模块大小进行变动，一个是水平变动，一个是垂直变动。<mark>transform:translate(-50%,0);</mark></li></p>
+        <p><li> div根据自身模块大小进行变动，一个是水平变动，一个是垂直变动。<mark>transform:translate(-50%,0);</mark>（还不太懂，不要乱用）</li></p>
+        <p><li>hexo博客部署命令：hexo clean,hexo generate,hexo depoly.前两个加hexo server是本地运行博客。</li></p>
     </div>
 </div>
 </body>
