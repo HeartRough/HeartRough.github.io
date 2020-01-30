@@ -14,15 +14,18 @@
     </style>
 </head>
 <body>
-<?php
-$q=isset($_POST['YZH'])? $_POST['YZH']:'';
-if(is_array($q)){
-    foreach ($q as $val) {
-        echo "YZH is ".$val."."."<br>";
-    }
-}
-echo "Yes,You are right. ".$_POST['how']."<br>";
-?>
+    <p style="text-align:center;">
+        <?php
+        $q=isset($_POST['YZH'])? $_POST['YZH']:'';
+        if(is_array($q)){
+            foreach ($q as $val) {
+                echo "YZH is ".$val."."."<br>";
+            }
+        }
+        if($_POST["how1"]!=""){echo $_POST["how1"]."<br>";}
+        if($_POST["how2"]!=""){echo $_POST["how2"]."<br>";}
+        ?>
+    </p>
 <!-- <mark>恭喜你发现了宝藏!!!</mark><br>
 <img src="http://xinke.xyz/pictures/YZH_DL.jpg" alt="YZH_DL.jpg" width="1080" height="1440"> -->
 </body>
