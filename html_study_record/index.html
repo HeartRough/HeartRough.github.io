@@ -6,6 +6,7 @@
 <style>
     body{
         font-family:"Comic Sans MS", cursive, sans-serif;
+        background-image:url("//xinke.xyz/pictures/king_drink_tea.png");
     }
     h1{
         text-align: center;
@@ -22,6 +23,7 @@
     }
     /* 问题格式 */
     li.question{
+        font-weight:bold;
         color:rgb(236, 10, 10);
         font-size:1.5em;
     }
@@ -46,21 +48,25 @@
         margin:0 auto;
     }
     div.center{
-        min-width:(1280-150)px;
+        min-width:(1280-150-5*2)px;
+        height:100%;
     }
     div.middle{
-        margin-left:150px;
+        border-radius:20px;
+        margin-left:160px;
         height:100%;
         background-color:rgb(241, 241, 241);
     }
     /* 涂鸦室 */
     div.gallery{
+        border-width:5px;
+        border-radius:20px;/*--角的弧度--*/
         top:230px;
-        left:0;
+        left:10px;
         width:150px;
         height:100%;
         position:absolute;
-        background-color:#CCCCCC;
+        background-color:rgb(243, 207, 87);
     }
     mark{
         background-color:#ddd;
@@ -84,8 +90,8 @@
     </div>
     <div class="center">
     <div class="gallery">
-        <div style="padding-top:10px;">
-            <img src="//xinke.xyz/gifs/Happy.gif" alt="Happy.gif" width="150px" height="150px" >
+        <div style="padding-top:10px;margin-top:10px;">
+            <img src="//xinke.xyz/gifs/dog.gif" alt="dog.gif" width="150px" height="150px" >
         </div>
         <br><hr>
         <h1 style="top:0;">涂鸦室</h1>
