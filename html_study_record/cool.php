@@ -6,7 +6,10 @@
     <style>
     body{
         font-family:"Comic Sans MS", cursive, sans-serif;
-        font-size:20px;
+        font-size:50px;
+        background-image:url("..//pictures/dark_souls_three.jpg");
+        background-size:700px auto;
+        background-position:repeat;
     }
     mark{
         background-color:#ddd;
@@ -14,7 +17,7 @@
     </style>
 </head>
 <body>
-    <p style="text-align:center;">
+    <p style="text-align:center;text-weight:border;color:white">
         <?php
         $q=isset($_POST['YZH'])? $_POST['YZH']:'';
         if(is_array($q)){

@@ -40,7 +40,7 @@
         font-size:0.7em;
     }
     div.top{
-        background-image:url("//xinke.xyz/pictures/bilibili.png");
+        background-image:url("..//pictures/bilibili.png");
         width:1280px;
         height:200px;
         /* 水平居中 */
@@ -50,7 +50,7 @@
     div.center{
         min-width:(1280-150-5*2)px;
         height:100%;
-        background-image:url("//xinke.xyz/pictures/king_drink_tea.png");
+        background-image:url("..//pictures/king_drink_tea.png");
         background-size:640px auto;
         background-position:repeat-y;
     }
@@ -96,16 +96,16 @@
     <div class="center">
     <div class="gallery">
         <div style="padding-top:10px;margin-top:10px;">
-            <img src="//xinke.xyz/gifs/dog.gif" alt="dog.gif" width="150px" height="150px" >
+            <img src="..//gifs/dog.gif" alt="dog.gif" width="150px" height="150px" >
         </div>
         <br><hr>
         <h1 style="top:0;">涂鸦室</h1>
         <hr>
-        <img src="//xinke.xyz/doodling/Money.jpg" alt="Dragon.jpg" width="150px" height="auto">
+        <img src="..//doodling/Money.jpg" alt="Dragon.jpg" width="150px" height="auto">
         <br><hr>
-        <img src="//xinke.xyz/doodling/QiLaiHuTao.jpg" alt="Dragon_more.jpg" width="150px" height="auto">
+        <img src="..//doodling/QiLaiHuTao.jpg" alt="Dragon_more.jpg" width="150px" height="auto">
         <br><hr>
-        <img src="//xinke.xyz/doodling/test.jpg" alt="邮娘把照片吃掉了！" width="150px" height="auto">
+        <img src="..//doodling/test.jpg" alt="邮娘把照片吃掉了！" width="150px" height="auto">
         <br>
     </div>
     <div class="middle">
@@ -123,18 +123,20 @@
         <hr>
         <p><li class="question">Q:异步提交是啥?当前页面提交怎么办到?</li></p>
         <hr>
-        <p><li class="question_finished">Q:warning:本地提交表单时出现的错误：<img src="//xinke.xyz/pictures/false_405.jpeg" alt="FALSE_405" width="100" height="71">（服务器里可以正确提交），如何解决？</li>
+        <p><li class="question_finished">Q:warning:本地提交表单时出现的错误：<img src="..//pictures/false_405.jpeg" alt="FALSE_405" width="100" height="71">（服务器里可以正确提交），如何解决？</li>
         <li class="answer">php环境没有弄对，或者文件(项目)没有放在www目录下。</li>
         <hr>
         <p><li class="question_finished">Q:咱的图片加载不出来啊！！！提交到服务器可以，那在本地呢？</li></p>
         <p><li class="answer">A:使用链接进行显示。</li></p>
         <hr>
         <p><li class="question">Q:如何用相对路径显示照片呢？</li></p>
-        <p><li class="answer">A:有"./"或者"不写"就是相对路径</li>
+        <p>
+            <li class="answer">A:有"../"是父系路径</li>
+            <li class="answer">A:有"./"或者"不写"就是相对路径</li>
             <li class="answer">A:有"/"是绝对路径</li>
             <li class="answer">前端的绝对路径相对于服务器的根目录</li>
             <li class="answer">后端的绝对路径相对于盘符根目录。</li></p>
-        <p><a href="https://www.cnblogs.com/zmz-com/p/10256388.html"><li class="quote">感谢张大佬</li></a></p>
+        <p><a href="//www.cnblogs.com/cl94/p/10504665.html"><li class="quote">借鉴这位大佬</li></a></p>
         <hr>
         <div style="text-align:center;width:300px;">
             <h1>实例</h1>
