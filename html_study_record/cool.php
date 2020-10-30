@@ -8,8 +8,8 @@
         font-family:"Comic Sans MS", cursive, sans-serif;
         font-size:50px;
         background-image:url("..//pictures/dark_souls_three.jpg");
-        background-size:700px auto;
-        background-position:repeat;
+        /* background-size:700px auto; */
+        background-repeat:no-repeat;
     }
     mark{
         background-color:#ddd;
