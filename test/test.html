@@ -20,5 +20,17 @@
     </head>
     <body>
         <div style="text-align:center;"><div style="margin:center;"><button class="circle"></button></div></div>
+        <script>
+            if(undefined)
+            document.write("ok");
+            if(1)
+            document.write("ok","<br\>");
+            var a=new Array(10,20,300);
+            var b=typeof(a);
+            for(var num=0;num<2;num++){
+                document.write(a[num],"<br\>");
+            }
+            document.write(a[0],"<br\>",b);
+        </script>
     </body>
 </html>
