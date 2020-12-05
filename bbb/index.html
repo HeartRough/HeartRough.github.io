@@ -1,0 +1,97 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>咸鱼日常</title>
+        <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            text-align:center;
+            font-family:"Comic Sans MS", cursive, sans-serif;
+            
+        }
+        h1{
+            /* color:rgb(255, 145, 0); */
+            font-size:5em;
+            margin:30px;
+        }
+        div.center{
+            display:inline-block;
+            width:1280px;
+            height:auto;
+            margin:auto;
+            margin-left:233px;
+            margin-right:23px;
+            margin-bottom:23px;
+            background-image:url("..//pictures/BengHuai3.jpg");
+            background-size:1280px 791.04px;
+        }
+        div.DeLiSha{
+            display:inline-block;
+            position:absolute;
+            width:200px;
+            height:auto;
+        }
+        table.setT{
+            font-weight:bold;
+            font-size:2em;
+            
+            /* color:rgb(75, 16, 185); */
+            color:rgb(255, 0, 0);
+            width:1280px;
+            height:791.04px;
+        }
+        </style>
+    </head>
+    <body onload="start1">
+        <h1>咸鱼舰长的周任务</h1>
+        <div>
+        <div class="DeLiSha"><img id="imgs" src="..//DeLiSha/3.webp" width="200" height="auto"></div>
+        <div class="DeLiSha" style="top:700px;"><img id="imgs" src="..//DeLiSha/1.webp" width="200" height="auto"></div>
+        <div class="center">
+            <table border="1" class="setT">
+                <tr>
+                    <td>周一</td><td>周二</td><td>周三</td><td>周四</td><td>周五</td><td>周六</td><td>周日</td>
+                </tr>
+                <tr>
+                    <td>开放世界刷新</td><td>&nbsp;</td><td>&nbsp;</td><td>开放世界刷新</td><td>&nbsp;</td><td>开放世界刷新</td><td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>深渊刷新</td><td>&nbsp;</td><td>晚上10点深渊结算</td><td>&nbsp;</td><td>深渊刷新</td><td>&nbsp;</td><td>晚上10点深渊结算</td>
+                </tr>
+                <tr>
+                    <td>悬赏委托刷新</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>战场商店刷新</td><td>记忆战场</td><td>记忆战场</td><td>记忆战场</td><td>&nbsp;</td><td>&nbsp;</td><td>记忆战场关闭</td>
+                </tr>
+                <tr>
+                    <td>舰团积分任务</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                </tr>
+                <!-- <tr>
+                    <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+                </tr> -->
+            </table>
+        </div>
+        </div>
+        <script type="text/javascript">
+            var i=1;
+            onload=function(){
+                mouse();
+                setInterval("start1()",1000);
+            }
+            function start1(){
+                if(i<15){
+                    i++;
+                }else{
+                    i=1;
+                }
+                document.getElementById("imgs").src="..//DeLiSha/"+i+".webp";
+            }
+        </script>
+    </body>
+</html>

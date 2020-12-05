@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>test</title> 
+        <style>
+            *{
+                border:0;
+                padding:0;
+                margin:0;
+            }
+          .circle{
+            width:200px;
+            height:200px;
+            background-color:red;
+            border-radius:50%;
+          }  
+
+        </style>
+    </head>
+    <body>
+        <div style="text-align:center;"><div style="margin:center;"><button class="circle"></button></div></div>
+        <script>
+            if(undefined)
+            document.write("ok");
+            if(1)
+            document.write("ok","<br\>");
+            var a=new Array(10,20,300);
+            var b=typeof(a);
+            for(var num=0;num<2;num++){
+                document.write(a[num],"<br\>");
+            }
+            document.write(a[0],"<br\>",b);
+        </script>
+    </body>
+</html>
