@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Html学习记录</title>
+<style>
+    body{
+        font-family:"Comic Sans MS", cursive, sans-serif;
+    }
+    h1{
+        text-align: center;
+    }
+    input{
+        text-indent:20px;
+    }
+    p{
+        line-height:1.5;/*行高*/
+        font-size:120%;
+    }
+    li{
+        text-indent:20px;/*缩进*/
+    }
+    /* 问题格式 */
+    li.question{
+        font-weight:bold;
+        color:rgb(236, 10, 10);
+        font-size:1.5em;
+    }
+    /* 已完成的问题格式 */
+    li.question_finished{
+        color:rgb(60, 141, 233);
+    }
+    /* 答案格式 */
+    li.answer{
+        color:green;
+    }
+    li.quote{
+        /* text-align: -webkit-match-parent; */
+        color:rgb(125, 125, 125);
+        font-size:0.7em;
+    }
+    div.top{
+        background-image:url("..//pictures/bilibili.png");
+        width:1280px;
+        height:200px;
+        /* 水平居中 */
+        margin:0 auto;
+        border-radius:10px;
+    }
+    div.center{
+        min-width:(1280-150-5*2)px;
+        height:100%;
+        background-image:url("..//pictures/king_drink_tea.png");
+        background-size:640px auto;
+        background-position:repeat-y;
+    }
+    div.middle{
+        border-radius:20px;
+        margin-left:160px;
+        height:100%;
+        /* background-color:rgb(241, 241, 241); */
+    }
+    /* 涂鸦室 */
+    div.gallery{
+        border-width:5px;
+        border-radius:20px;/*--角的弧度--*/
+        top:230px;
+        left:1px;
+        width:150px;
+        height:auto;
+        position:absolute;
+        background-color:rgb(197, 234, 253);
+        padding-bottom:40px;
+        text-align:center;
+    }
+    mark{
+        background-color:#ddd;
+    }
+    span.toCao{
+        background-color:black;
+    }
+    span:hover.toCao{
+        background-color:rgb(238, 252, 161);
+    }
+    a{
+        text-decoration:unset;/*无下划线*/
+    }
+    
+    
+</style>
+
+</head>
+<body>
+    <div class="top">
+        <!-- TO--DO -->
+    </div>
+    <div class="center">
+    <div class="gallery">
+        <div style="padding-top:10px;margin-top:10px;text-align:center;">
+            <img src="..//gifs/dog.gif" alt="dog.gif" width="140px" height="140px" >
+        </div>
+        <br><hr>
+        <h1 style="top:0;">涂鸦室</h1>
+        <hr>
+        <img src="..//doodling/Money.jpg" alt="邮娘把照片吃掉了！" width="140px" height="auto">
+        <br><hr>
+        <img src="..//doodling/QiLaiHuTao.jpg" alt="邮娘把照片吃掉了！" width="140px" height="auto">
+        <br><hr>
+        <img src="..//doodling/test.jpg" alt="邮娘把照片吃掉了！" width="140px" height="auto">
+        <br><hr>
+        <img src="..//doodling/AZ.JPG" alt="邮娘把照片吃掉了！" width="140px" height="auto">
+        <br><hr>
+        <img src="..//doodling/Dragon.jpg" alt="邮娘把照片吃掉了！" width="140px" height="auto">
+        <br><hr>
+        <img src="..//doodling/XiaoMai.jpg" alt="邮娘把照片吃掉了！" width="140px" height="auto">
+        <br>
+    </div>
+    <div class="middle">
+        <h1>工作日志</h1>
+        <p><li class="question">Q:div之间有间隔，单单消除padding和margin有时消除不掉</li></p>
+        <p><li class="question">Q:为什么gif图放一段时间不动了，本地文件也不动了，重新更新了一次。</li></p>
+        <hr>
+        <p><li class="question_finished">Q:背景图片的显示</li></p>
+        <p><li class="answer">A:使用绝对路径,以及background属性。</li></p>
+        <hr>
+        <p><li class="question_finished">Q:PHP_EOL和"\n"为何实际运行不换行？而"&lt;br&gt;"可以。</li></p>   <!--&lt;是"<"&gt;是">" -->
+        <p><li class="answer">A:有换行的属性，但是页面是html所以没有换行。</li></p>
+        <hr>
+        <p ><li class="question_finished">Q:服务器如果远程下载GitHub的内容，会生成一个git文件，那如何自动部署呢？</li></p>
+        <p><li class="answer">A:自动部署指的不是远程下载，而是在服务器安装git后，与github进行密钥配对，再用钩子进行连接就好了。</li></p>
+        <hr>
+        <p><li class="question">Q:异步提交是啥?当前页面提交怎么办到?</li></p>
+        <hr>
+        <p><li class="question_finished">Q:warning:本地提交表单时出现的错误：<img src="..//pictures/false_405.jpeg" alt="FALSE_405" width="100" height="71">（服务器里可以正确提交），如何解决？</li>
+        <li class="answer">php环境没有弄对，或者文件(项目)没有放在www目录下。</li>
+        <hr>
+        <p><li class="question_finished">Q:咱的图片加载不出来啊！！！提交到服务器可以，那在本地呢？</li></p>
+        <p><li class="answer">A:使用链接进行显示。</li></p>
+        <hr>
+        <p><li class="question">Q:如何用相对路径显示照片呢？</li></p>
+        <p>
+            <li class="answer">A:有"../"是父系路径</li>
+            <li class="answer">A:有"./"或者"不写"就是相对路径</li>
+            <li class="answer">A:有"/"是绝对路径</li>
+            <li class="answer">前端的绝对路径相对于服务器的根目录</li>
+            <li class="answer">后端的绝对路径相对于盘符根目录。</li></p>
+        <p><a href="//www.cnblogs.com/cl94/p/10504665.html"><li class="quote">借鉴这位大佬</li></a></p>
+        <hr>
+        <div style="text-align:center;width:300px;">
+            <h1>实例</h1>
+            <p>表单,例子如下：</p>
+            <div>
+                <form name="input" action="cool.php" method="POST">
+                    <p>How about YZH?<br>
+                        <input type="checkbox" name="YZH[]" value="cool">He's a cool boy.<br>
+                        <input type="checkbox" name="YZH[]" value="very cool">He's very cool.<br>
+                        <input type="checkbox" name="YZH[]" value="Shuai De Yi Pi">他帅的一批。<br>
+                        <input type="text" name="how1" value="He is so cool"><br><!-- 提示文本不消失 -->
+                        <input type="text" name="how2" placeholder="He is a big boss"><!-- 提示文本会在输入时消失 -->
+                    </p>
+                    <input type="submit" value="SUBMIT     ">
+                </form>
+            </div>
+        </div style="text-align:center;">
+        <hr>
+        <h1>一些注意点</h1>
+        <p><li>复选框的选项支持全局设置。比如我设置的字体,它还活着。</li></p>
+        <p><li>CSS优先级顺序：近的高。</li></p>
+        <!-- <p><li>li,h自带换行。</li></p> -->
+        <p><li>一个汉字占三个字符位置。</li></p>
+        <p><li> div根据自身模块大小进行变动，一个是水平变动，一个是垂直变动。<mark>transform:translate(-50%,0);</mark>（还不太懂，不敢乱用）</li></p>
+        <p><li>hexo博客部署命令：hexo clean,hexo generate,hexo depoly.前两个加hexo server是本地运行博客。</li></p>
+        <p><li>text-decoration 文本装饰，可用于去除下划线。<span class="toCao">（学这个跟学英语一样）</span></li></p>
+        <p><li>calc的运算符两端要加空格</li></p>
+        <p><li>opacity透明度</li></p>
+    </div>
+</div>
+</body>
+</html>

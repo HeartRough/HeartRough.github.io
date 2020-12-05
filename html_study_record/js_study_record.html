@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>js学习笔记</title>
+        <style>
+            body{
+        font-family:"Comic Sans MS", cursive, sans-serif;
+    }
+    h1{
+        text-align: center;
+    }
+    input{
+        text-indent:20px;
+    }
+    p{
+        line-height:1.5;/*行高*/
+        font-size:120%;
+    }
+    li{
+        text-indent:20px;/*缩进*/
+    }
+    /* 问题格式 */
+    li.question{
+        font-weight:bold;
+        color:rgb(236, 10, 10);
+        font-size:1.5em;
+    }
+    /* 已完成的问题格式 */
+    li.question_finished{
+        color:rgb(60, 141, 233);
+    }
+    /* 答案格式 */
+    li.answer{
+        color:green;
+    }
+    li.quote{
+        /* text-align: -webkit-match-parent; */
+        color:rgb(125, 125, 125);
+        font-size:0.7em;
+    }
+    div.top{
+        background-image:url("..//pictures/Arknight.webp");
+        width:1280px;
+        height:200px;
+        /* 水平居中 */
+        margin:0 auto;
+        border-radius:10px;
+    }
+    div.center{
+        min-width:(1280-150-5*2)px;
+        height:100%;
+        background-image:url("..//pictures/jingjing.png");
+        background-size:640px auto;
+        background-position:repeat-y;
+    }
+    div.middle{
+        border-radius:20px;
+        margin-left:160px;
+        text-align:center;
+        height:100%;
+        /* background-color:rgb(241, 241, 241); */
+    }
+    /* 涂鸦室 */
+    div.gallery{
+        border-width:5px;
+        border-radius:20px;/*--角的弧度--*/
+        top:230px;
+        left:1px;
+        width:150px;
+        height:auto;
+        position:absolute;
+        background-color:rgb(197, 234, 253);
+        padding-bottom:40px;
+        text-align:center;
+    }
+    mark{
+        background-color:#ddd;
+    }
+    span.toCao{
+        background-color:black;
+    }
+    span:hover.toCao{
+        background-color:rgb(238, 252, 161);
+    }
+    a{
+        text-decoration:unset;/*无下划线*/
+    }
+        </style>
+    </head>
+    <body>
+        <div class="top">
+            <!-- TO--DO -->
+        </div>
+        <div class="center">
+            <div class="gallery">
+                <div style="padding-top:10px;margin-top:10px;text-align:center;">
+                    <img src="..//gifs/cat.gif" alt="cat.gif" width="140px" height="140px" >
+                </div>
+            </div>
+            <div class="middle">
+                <h1>Js<span style="color:#fff;text-decoration:line-through">摸鱼</span>日志</h1>
+                <p><li class="question_finished">Q:js如何判断一个变量与NaN想等</li></p>
+                <p><li class="answer">A:Number.isNaN(var)或者isNaN(var)</li></p>
+                <hr>
+                <p><li class="question_finished">Q:undefined用在布尔表达式中，它被解释为true还是flase？</li></p>
+                <p><li class="answer">A:flase</li></p>
+                <hr>
+                <p><li class="question"></li></p>
+                <p><li class="answer"></li></p>
+                <hr>
+                <p><li class="question"></li></p>
+                <p><li class="answer"></li></p>
+                <hr>
+                <p><li class="question"></li></p>
+                <p><li class="answer"></li></p>
+                <hr>
+                <p><li class="question"></li></p>
+                <p><li class="answer"></li></p>
+                <hr>
+            </div>
+        </div>
+    </body>
+</html>
