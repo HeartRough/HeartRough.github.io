@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+    }
+    body{
+        text-align:center;
+        font-family:"Comic Sans MS", cursive, sans-serif;
+    }
+    div.center{
+        display:inline-block;
+        /* width:1280px; */
+        width:1000px;
+        height:auto;
+        margin:auto;
+        margin-top:23px;
+        margin-bottom:23px;
+        /* background-image:url("..//pictures/BengHuai3.jpg");
+        background-size:1280px 791.04px; */
+    }
+    table.setT{
+    font-weight:bold;
+    font-size:1.5em;
+    width:1000px;
+    height:618px;
+    }
+    a{
+    color:red;
+    font-weight:bolder;
+    text-decoration:none;
+    }
+    div.top{
+        display:inline-block;
+        width:1000px;
+        height:auto;
+        margin-top:23px;
+        margin-bottom:46px;
+        /* background-image:url("..//pictures/KeChengBiao.jpg");
+        background-size:700px auto; */
+    }
