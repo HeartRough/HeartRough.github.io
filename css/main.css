@@ -1,0 +1,66 @@
+*{
+    margin:0;
+    padding:0;
+  }
+  body{
+    /* background-image:url(".//pictures/Er_Ji_Niang.jpg"); */
+    background-color:rgb(230, 221, 221);
+    background-size:cover;
+    background-position:50%;
+    text-align:center;
+    font-family:"Comic Sans MS", cursive, sans-serif；
+  }
+    /* 用于限制预备号的格式，居中，最下端 */
+  div.footer{
+    position:absolute;
+    text-align:center;
+    bottom:0;
+    left:0;
+    height:20px;
+    width:100%;
+    padding:5px;
+    /* background-color: #000000; */
+    text-align:center;
+    font-size:15px;
+    color:black;
+    margin:0;
+    padding:0;
+  }
+  div.main{
+    background-color:rgba(175, 174, 174, 0.842);
+    /* width:800px;
+    height:494px; */
+    width:600px;
+    height:370px;
+    margin:auto;
+    /* margin-top:6%; */
+    margin-top:12%;
+    border-radius:5px;
+    padding:48px;
+    text-align:center;
+  }
+  div.target{
+    background-color:rgb(255, 143, 51);
+    border-radius:10px;
+    font-size:1.5em;
+    width:450px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom:10px;
+    opacity:0.9;/*透明度*/
+  }
+  div{
+    margin:1px;
+  }
+  a{
+    /* color: rgb(22, 168, 204); */
+    color:black;
+    text-decoration:unset;
+    font-weight:bolder;
+    font-size:2em;
+  }
+  li.TongDao{
+    font-size:1.5em;
+  }
