@@ -1,0 +1,1 @@
+document.getElementById("enter").onclick=enter;

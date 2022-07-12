@@ -3,8 +3,8 @@
     padding:0;
   }
   body{
-    /* background-image:url(".//pictures/Er_Ji_Niang.jpg"); */
-    background-color:rgb(230, 221, 221);
+    background-image:url("..//pictures/Er_Ji_Niang.jpg");
+    background-color:rgb(251, 250, 250);
     background-size:cover;
     background-position:50%;
     text-align:center;
@@ -19,7 +19,7 @@
     height:20px;
     width:100%;
     padding:5px;
-    /* background-color: #000000; */
+    background-color: #000000;
     text-align:center;
     font-size:15px;
     color:black;
@@ -27,11 +27,11 @@
     padding:0;
   }
   div.main{
-    background-color:rgba(175, 174, 174, 0.842);
+    background-color:rgba(210, 203, 203, 0.842);
     /* width:800px;
     height:494px; */
     width:600px;
-    height:370px;
+    height:330px;
     margin:auto;
     /* margin-top:6%; */
     margin-top:12%;
@@ -49,7 +49,7 @@
     margin:auto;
     margin-top:10px;
     margin-bottom:10px;
-    opacity:0.9;/*透明度*/
+    opacity:0.85;/*透明度*/
   }
   div{
     margin:1px;
