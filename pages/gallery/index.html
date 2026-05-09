@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>涂鸦室 - 画廊</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>
+    .gallery-page {
+      text-align: center;
+    }
+    /* Masonry waterfall layout using CSS columns */
+    .gallery-grid {
+      column-count: 4;
+      column-gap: 16px;
+      margin-top: 24px;
+    }
+    .gallery-item {
+      break-inside: avoid;
+      margin-bottom: 16px;
+      background: var(--color-card);
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gallery-item .img-name {
+      display: block;
+      padding: 10px 14px;
+      font-size: 0.85rem;
+      color: var(--color-text-light);
+      text-align: center;
+    }
+    .gif-featured {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+    .gif-featured img {
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+    }
+    @media (max-width: 1024px) {
+      .gallery-grid { column-count: 3; }
+    }
+    @media (max-width: 768px) {
+      .gallery-grid { column-count: 2; column-gap: 12px; }
+      .gallery-item { margin-bottom: 12px; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { column-count: 1; }
+    }
+
+    /* Lightbox overlay */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+      cursor: zoom-out;
+    }
+    .lightbox.active {
+      display: flex;
+    }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 8px;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+      object-fit: contain;
+    }
+    .lightbox .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 28px;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+    .lightbox .close-btn:hover {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="site-logo">HeartRough</a>
+      <nav class="site-nav">
+        <a href="../../index.html">🏠 首页</a>
+        <a href="../html-study/index.html">📝 HTML日志</a>
+        <a href="../html-study/js_study_record.html">⚡ JS日志</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="site-main">
+    <div class="page-header">
+      <a href="../../index.html" class="back-link">← 返回首页</a>
+      <h1>🎨 涂鸦室</h1>
+    </div>
+
+    <div class="content gallery-page">
+      <h2>涂鸦作品</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="../../assets/images/doodling/Money.jpg" alt="Money">
+          <span class="img-name">Money</span>
+        </div>
+        <div class="gallery-item">
+          <img src="../../assets/images/doodling/QiLaiHuTao.jpg" alt="QiLaiHuTao">
+          <span class="img-name">QiLaiHuTao</span>
+        </div>
+        <div class="gallery-item">
+          <img src="../../assets/images/doodling/test.jpg" alt="test">
+          <span class="img-name">test</span>
+        </div>
+        <div class="gallery-item">
+          <img src="../../assets/images/doodling/Dragon.jpg" alt="Dragon">
+          <span class="img-name">Dragon</span>
+        </div>
+        <div class="gallery-item">
+          <img src="../../assets/images/doodling/Dragon_more.jpg" alt="Dragon_more">
+          <span class="img-name">Dragon_more</span>
+        </div>
+        <div class="gallery-item">
+          <img src="../../assets/images/doodling/XiaoMai.jpg" alt="XiaoMai">
+          <span class="img-name">XiaoMai</span>
+        </div>
+        <div class="gallery-item">
+          <img src="../../assets/images/doodling/MengWang.png" alt="MengWang">
+          <span class="img-name">MengWang</span>
+        </div>
+        <div class="gallery-item">
+          <img src="../../assets/images/doodling/DuBin.png" alt="DuBin">
+          <span class="img-name">DuBin</span>
+        </div>
+        <div class="gallery-item">
+          <img src="../../assets/images/doodling/WenDi.png" alt="WenDi">
+          <span class="img-name">WenDi</span>
+        </div>
+        <div class="gallery-item">
+          <img src="../../assets/images/doodling/DiuRen.jpg" alt="DiuRen">
+          <span class="img-name">DiuRen</span>
+        </div>
+        <div class="gallery-item">
+          <img src="../../assets/images/doodling/DiuRen2.jpg" alt="DiuRen2">
+          <span class="img-name">DiuRen2</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close-btn" id="lightboxClose">&times;</span>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script>
+    (function() {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const closeBtn = document.getElementById('lightboxClose');
+
+      // Click any gallery image to open lightbox
+      document.querySelectorAll('.gallery-item img').forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', function(e) {
+          e.stopPropagation();
+          lightboxImg.src = this.src;
+          lightboxImg.alt = this.alt;
+          lightbox.classList.add('active');
+        });
+      });
+
+      // Close on click close button
+      closeBtn.addEventListener('click', function() {
+        lightbox.classList.remove('active');
+      });
+
+      // Close on click backdrop
+      lightbox.addEventListener('click', function() {
+        lightbox.classList.remove('active');
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          lightbox.classList.remove('active');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

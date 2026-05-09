@@ -2,6 +2,6 @@
 
 > For studying html
 
-1. 课程表
+1. 一些笔记
 
-2. Vue框架
+2. 涂鸦
