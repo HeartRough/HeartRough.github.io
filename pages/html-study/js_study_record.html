@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS 学习日志</title>
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>
+    .study-layout {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .study-main {
+      flex: 1;
+      min-width: 0;
+    }
+    .study-sidebar {
+      width: 180px;
+      flex-shrink: 0;
+      background: var(--color-card);
+      border-radius: var(--radius);
+      border: 1px solid var(--color-border);
+      padding: 20px 16px;
+      position: sticky;
+      top: calc(var(--header-height) + 24px);
+    }
+    .study-sidebar h3 {
+      font-size: 1rem;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .study-sidebar hr {
+      margin: 12px 0;
+    }
+    .study-sidebar img {
+      border-radius: var(--radius-sm);
+      margin: 0 auto 8px;
+    }
+    @media (max-width: 768px) {
+      .study-layout {
+        flex-direction: column-reverse;
+      }
+      .study-sidebar {
+        width: 100%;
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="../../index.html" class="site-logo">HeartRough</a>
+      <nav class="site-nav">
+        <a href="../../index.html">🏠 首页</a>
+        <a href="index.html">📝 HTML日志</a>
+        <a href="../gallery/index.html">🎨 涂鸦室</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="site-main">
+    <div class="page-header">
+      <a href="../../index.html" class="back-link">← 返回首页</a>
+      <h1>⚡ JS 学习日志</h1>
+    </div>
+
+    <div class="study-layout">
+      <!-- Main Content -->
+      <div class="content study-main">
+        <h2>Js <span style="color:#999; text-decoration:line-through;">摸鱼</span> 日志</h2>
+
+        <div class="q-list">
+          <div class="q-item">
+            <div class="q-question finished">Q: js如何判断一个变量与NaN相等</div>
+            <div class="q-answer">A: Number.isNaN(var) 或者 isNaN(var)</div>
+          </div>
+
+          <hr>
+
+          <div class="q-item">
+            <div class="q-question finished">Q: undefined用在布尔表达式中，它被解释为true还是false？</div>
+            <div class="q-answer">A: false</div>
+          </div>
+
+          <hr>
+
+          <div class="q-item">
+            <div class="q-question">Q: （待补充）</div>
+          </div>
+
+          <hr>
+
+          <div class="q-item">
+            <div class="q-question">Q: （待补充）</div>
+          </div>
+
+          <hr>
+
+          <div class="q-item">
+            <div class="q-question">Q: （待补充）</div>
+          </div>
+
+          <hr>
+
+          <div class="q-item">
+            <div class="q-question">Q: （待补充）</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
