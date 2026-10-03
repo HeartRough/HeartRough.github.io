@@ -4,14 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML 学习日志</title>
+  <meta name="description" content="记录 HTML 与 CSS 学习过程中的问题、示例和实践心得，包括图片路径、换行与样式规则。">
   <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/study.css">
+  <script src="../../assets/js/study.js" defer></script>
 </head>
 <body>
   <!-- Header -->
   <header class="site-header">
     <div class="header-inner">
       <a href="../../index.html" class="site-logo">HeartRough</a>
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="主导航">
         <a href="../../index.html">🏠 首页</a>
         <a href="../gallery/index.html">🎨 涂鸦室</a>
       </nav>
@@ -35,28 +38,35 @@
 
         <div class="q-item">
           <div class="q-question">Q: 为什么gif图放一段时间不动了，本地文件也不动了，重新更新了一次。</div>
-          <img src="../../assets/images/gifs/doctor_dance.gif" alt="doctor_dance" style="max-width: 25vw; margin-top: 8px; border-radius: 8px;">
+          <div class="study-animation">
+            <img id="studyAnimation" src="../../assets/images/gifs/doctor_dance-poster.webp" data-animation="../../assets/images/gifs/doctor_dance.gif" alt="博士跳舞动画示例" width="320" height="240" decoding="async">
+            <div class="animation-controls">
+              <button id="animationToggle" class="btn btn-primary" type="button" aria-controls="studyAnimation" aria-pressed="false" hidden>播放动画</button>
+              <a href="../../assets/images/gifs/doctor_dance.gif">打开原始 GIF（约 4.25 MB）</a>
+            </div>
+            <p id="animationStatus" role="status"></p>
+          </div>
         </div>
 
         <hr>
 
         <div class="q-item">
           <div class="q-question finished">Q: 背景图片的显示</div>
-          <div class="q-answer">A: 使用绝对路径,以及background属性。</div>
+          <div class="q-answer">A: 使用 <code>background-image: url(...)</code>。外部 CSS 中的相对路径以 CSS 文件所在目录为基准；也可以使用以 <code>/</code> 开头的站点根路径。</div>
         </div>
 
         <hr>
 
         <div class="q-item">
-          <div class="q-question finished">Q: PHP_EOL和"\n"为何实际运行不换行？而"<br>"可以。</div>
-          <div class="q-answer">A: 有换行的属性，但是页面是html所以没有换行。</div>
+          <div class="q-question finished">Q: PHP_EOL 和 <code>\n</code> 为何在页面中不换行，而 <code>&lt;br&gt;</code> 可以？</div>
+          <div class="q-answer">A: HTML 默认会折叠普通文本中的空白和换行。需要显示换行时，可以使用 <code>&lt;br&gt;</code>，或通过 <code>white-space: pre-wrap</code> 保留文本换行。</div>
         </div>
 
         <hr>
 
         <div class="q-item">
           <div class="q-question finished">Q: 服务器如果远程下载GitHub的内容，会生成一个git文件，那如何自动部署呢？</div>
-          <div class="q-answer">A: 自动部署指的不是远程下载，而是在服务器安装git后，与github进行密钥配对，再用钩子进行连接就好了。</div>
+          <div class="q-answer">A: <code>.git</code> 是版本控制目录，下载代码本身不等于部署。自动部署需要在代码更新后触发构建或发布步骤；具体方式取决于托管平台和服务器配置。</div>
         </div>
 
         <hr>
@@ -68,41 +78,39 @@
         <hr>
 
         <div class="q-item">
-          <div class="q-question finished">Q: warning:本地提交表单时出现的错误：<img src="../../assets/images/pictures/false_405.jpeg" alt="FALSE_405" width="100" height="71">（服务器里可以正确提交），如何解决？</div>
-          <div class="q-answer">A: php环境没有弄对，或者文件(项目)没有放在www目录下。</div>
+          <div class="q-question finished">Q: 本地提交表单时出现 405 错误：<img src="../../assets/images/pictures/false_405.jpeg" alt="表单提交时的 405 错误截图" width="100" height="71" loading="lazy" decoding="async">（服务器里可以正确提交），如何解决？</div>
+          <div class="q-answer">A: 405 表示目标资源不允许该请求方法。检查表单的 <code>action</code>、<code>method</code> 和服务端路由；仅运行静态文件服务器不能处理 PHP 表单。</div>
         </div>
 
         <hr>
 
         <div class="q-item">
           <div class="q-question finished">Q: 咱的图片加载不出来啊！！！提交到服务器可以，那在本地呢？</div>
-          <div class="q-answer">A: 使用链接进行显示。</div>
+          <div class="q-answer">A: 检查图片路径相对于当前 HTML 的位置、文件名大小写以及文件是否存在，并在浏览器网络面板确认请求地址和状态码。</div>
         </div>
 
         <hr>
 
         <div class="q-item">
           <div class="q-question">Q: 如何用相对路径显示照片呢？</div>
-          <div class="q-answer">A: 有"../"是父系路径</div>
-          <div class="q-answer">A: 有"./"或者"不写"就是相对路径</div>
-          <div class="q-answer">A: 有"/"是绝对路径</div>
-          <div class="q-answer">前端的绝对路径相对于服务器的根目录</div>
-          <div class="q-answer">后端的绝对路径相对于盘符根目录。</div>
-          <div class="q-quote">参考：<a href="//www.cnblogs.com/cl94/p/10504665.html" target="_blank" rel="noopener">cnblogs.com/cl94/p/10504665.html</a></div>
+          <div class="q-answer">A: <code>../</code> 指上一级目录；<code>./</code> 或不加前缀，通常相对于当前文档 URL 所在目录解析。</div>
+          <div class="q-answer">以 <code>/</code> 开头是站点根路径，例如 <code>/assets/example.jpg</code>；完整 URL 则包含协议和主机，例如 <code>https://example.com/image.jpg</code>。</div>
+          <div class="q-answer">URL 路径与服务器文件系统路径不是同一个概念。文件系统的绝对路径形式取决于操作系统。</div>
+          <div class="q-quote">参考：<a href="https://www.cnblogs.com/cl94/p/10504665.html" target="_blank" rel="noopener">cnblogs.com/cl94/p/10504665.html</a></div>
         </div>
       </div>
 
       <hr>
 
       <h2>一些注意点</h2>
-      <ul style="padding-left: 20px; line-height: 2;">
-        <li>复选框的选项支持全局设置。比如我设置的字体,它还活着。</li>
-        <li>CSS优先级顺序：近的高。</li>
-        <li>一个汉字占三个字符位置。</li>
-        <li>div根据自身模块大小进行变动，一个是水平变动，一个是垂直变动。<mark style="background:#ddd; padding:2px 6px; border-radius:3px;">transform:translate(-50%,0);</mark>（还不太懂，不敢乱用）</li>
+      <ul class="study-notes">
+        <li>部分字体属性可以继承；表单控件需要时可显式设置 <code>font: inherit</code>。</li>
+        <li>CSS 层叠需要考虑来源、重要性和层叠层；这些条件相同时，再比较选择器优先级等规则。普通同层规则的优先级相同时，后声明的规则生效，不能只理解为“近的高”。</li>
+        <li>字符数、字节数和显示宽度不同。常见汉字在 UTF-8 编码中通常占 3 个字节，部分扩展汉字占 4 个字节；显示宽度取决于字体与排版。</li>
+        <li><code>transform: translate(-50%, 0)</code> 让元素向左平移自身参考框宽度的一半，不会改变它在普通文档流中原先占据的位置。</li>
         <li>hexo博客部署命令：hexo clean, hexo generate, hexo deploy. 前两个加hexo server是本地运行博客。</li>
         <li>text-decoration 文本装饰，可用于去除下划线。</li>
-        <li>calc的运算符两端要加空格</li>
+        <li><code>calc()</code> 中的加号和减号两侧需要空格，例如 <code>calc(100% - 24px)</code>。</li>
         <li>opacity透明度</li>
       </ul>
     </div>

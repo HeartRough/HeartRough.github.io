@@ -1,0 +1,12 @@
+{
+  "name": "heartrough-blog",
+  "private": true,
+  "scripts": {
+    "images": "node scripts/generate-images.cjs",
+    "test": "node --test tests/site.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "sharp": "0.35.4"
+  }
+}

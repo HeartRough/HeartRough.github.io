@@ -10,7 +10,7 @@
   --color-bg: #f5f6fa;
   --color-card: #ffffff;
   --color-text: #2c3e50;
-  --color-text-light: #7f8c8d;
+  --color-text-light: #59676a;
   --color-border: #ecf0f1;
   --color-link: #3498db;
   --color-link-hover: #2980b9;
@@ -18,7 +18,7 @@
   --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
   --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
   --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
-  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+
   --radius: 12px;
   --radius-sm: 8px;
   --max-width: 960px;
@@ -62,6 +62,11 @@ img {
   height: auto;
   display: block;
 }
+
+button, input, select, textarea { font: inherit; }
+code { font-family: var(--font-mono); overflow-wrap: anywhere; }
+:focus-visible { outline: 3px solid var(--color-link-hover); outline-offset: 4px; }
+.content { overflow-wrap: anywhere; }
 
 /* --- Header / 导航栏 --- */
 .site-header {
@@ -107,7 +112,7 @@ img {
   color: var(--color-text);
   font-size: 0.9rem;
   font-weight: 500;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .site-nav a:hover {
@@ -137,7 +142,7 @@ img {
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
   padding: 28px 24px;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   border: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
@@ -154,7 +159,7 @@ img {
   margin-bottom: 12px;
 }
 
-.card h3 {
+.card h2 {
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 8px;
@@ -289,57 +294,6 @@ img {
   margin-top: 4px;
 }
 
-/* --- Tags / 标签 --- */
-.tag {
-  display: inline-block;
-  padding: 2px 10px;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  background: var(--color-bg);
-  color: var(--color-text-light);
-}
-
-.tag-red { background: #fde8e8; color: #e74c3c; }
-.tag-blue { background: #e8f4fd; color: #3498db; }
-.tag-green { background: #e8f8e8; color: #27ae60; }
-
-/* --- Table / 表格 --- */
-.content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 16px 0;
-}
-
-.content th, .content td {
-  padding: 10px 14px;
-  border: 1px solid var(--color-border);
-  text-align: left;
-}
-
-.content th {
-  background: var(--color-bg);
-  font-weight: 700;
-}
-
-/* --- Gallery / 画廊 --- */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 12px;
-  margin: 16px 0;
-}
-
-.gallery img {
-  border-radius: var(--radius-sm);
-  transition: transform 0.2s ease;
-  cursor: pointer;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
 /* --- Buttons / 按钮 --- */
 .btn {
   display: inline-flex;
@@ -351,7 +305,7 @@ img {
   font-weight: 600;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .btn-primary {
@@ -362,17 +316,6 @@ img {
 .btn-primary:hover {
   background: var(--color-accent-hover);
   color: #fff;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 2px solid var(--color-border);
-  color: var(--color-text);
-}
-
-.btn-outline:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
 }
 
 /* --- Responsive / 响应式 --- */
@@ -402,13 +345,11 @@ img {
   .content {
     padding: 20px;
   }
-
-  .gallery {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  }
 }
 
 @media (max-width: 480px) {
+  .site-header { height: auto; min-height: var(--header-height); }
+  .header-inner { min-height: var(--header-height); flex-wrap: wrap; gap: 4px 12px; padding-block: 8px; }
   .site-logo {
     font-size: 1rem;
   }
@@ -417,4 +358,10 @@ img {
     padding: 4px 8px;
     font-size: 0.75rem;
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+  .card:hover, .card:hover .card-link::after { transform: none; }
 }

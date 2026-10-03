@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>心坷的个人博客</title>
+  <meta name="description" content="心坷的个人博客，记录 HTML 学习笔记、问题与心得，分享个人涂鸦作品。">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -11,7 +12,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a href="/index.html" class="site-logo">HeartRough</a>
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="主导航">
       <a href="pages/html-study/index.html">📝 HTML日志</a>
       <a href="pages/gallery/index.html">🎨 涂鸦室</a>
       </nav>
@@ -20,25 +21,30 @@
 
   <!-- Main -->
   <main class="site-main">
+    <div class="page-header">
+      <h1>心坷的个人博客</h1>
+      <p>记录学习，分享涂鸦。</p>
+    </div>
     <div class="card-grid">
       <a href="pages/html-study/index.html" class="card">
         <div class="card-icon">📝</div>
-        <h3>HTML 学习日志</h3>
+        <h2>HTML 学习日志</h2>
         <p>记录 HTML 学习过程中的问题、心得与实例。</p>
         <span class="card-link">查看详情</span>
       </a>
 
       <a href="pages/gallery/index.html" class="card">
         <div class="card-icon">🎨</div>
-        <h3>涂鸦室</h3>
+        <h2>涂鸦室</h2>
         <p>涂鸦作品</p>
         <span class="card-link">查看详情</span>
       </a>
 
       <a href="https://github.com/HeartRough" class="card" target="_blank" rel="noopener">
         <div class="card-icon">🐙</div>
-        <h3>GitHub</h3>
-        <span class="card-link">前往 →</span>
+        <h2>GitHub</h2>
+        <p>查看我的代码与项目。</p>
+        <span class="card-link">前往</span>
       </a>
     </div>
   </main>
